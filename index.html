@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+</head>
+<body>
+
+   <h1 id="title" style="font-size:16px; display:flex; justify-content:center; text-align:center"></h1>
+    <p>number of panels installed : <span><input type="number" id="panelCount" step="100000"/></span></p>
+    <p>panel power [W] : <span><input type="number" id="panelPower" step="100"/></span></p>
+    <!-- <p>cloud cover : <span>
+        <input type="radio" id="high" name="occultation" value="high">
+        <label for="high">High</label>
+        <input type="radio" id="mid" name="occultation" value="mid">
+        <label for="mid">Medium</label>
+        <input type="radio" id="low" name="occultation" value="low" checked>
+        <label for="low">Low</label>
+    </span></p> -->
+    <p>number of windturbines : <span><input type="number" id="turbineCount" step="1000"/></span></p>
+    <!-- <p>windturbine power [kW]: <span><input type="number" id="turbinePower"/></span></p> -->
+    <label for="turbines">Select the wind turbine:</label>
+  <select name="turbines" id="cars">
+    <option value="vestav40">Vestas V42 600/42</option>
+  </select>
+    
+
+   
+   <!--  <canvas id="myChart" style="width:100%;max-width:1300px"></canvas> -->
+
+   <!--  <canvas id="solarWind" style="width:100%;max-width:1300px"></canvas> -->
+
+    <canvas id="marchCH" style="width:100%;max-width:1300px"></canvas>
+    <button onclick="showHideCloudCover()">CloudCover</button> 
+    <button onclick="showHideWindspeed()">Wind Speed</button>
+    <canvas id="sw" style="width:100%;max-width:1300px"></canvas>
+    <canvas id="sw1" style="width:100%;max-width:1300px"></canvas>
+
+    <script src="./dist/main.js"></script>
+    <script>
+        // button actions for secondary displays
+    function showHideCloudCover() {
+        const swElement = document.getElementById('sw');
+        if(swElement.style.display === 'none') {
+            swElement.style.display = 'block'
+        } else {
+            swElement.style.display = 'none'
+        }
+    }
+    function showHideWindspeed() {
+        const sw1Element = document.getElementById('sw1');
+        if(sw1Element.style.display === 'none') {
+            sw1Element.style.display = 'block'
+        } else {
+            sw1Element.style.display = 'none'
+        }
+    }
+        
+    </script>
+
+   
+    
+</body>
+</html>
